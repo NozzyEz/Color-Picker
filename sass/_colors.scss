@@ -1,0 +1,77 @@
+.colors {
+  min-height: 80vh;
+  @include flex(center, center, row);
+  color: $color-text-color;
+  .color {
+    height: 80vh;
+    @include flex(space-evenly, center, column);
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    h2 {
+      cursor: pointer;
+    }
+    .controls {
+      @include flex(center, center, column);
+      .adjust,
+      .lock {
+        font-size: 2rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        margin: 2rem 0rem;
+      }
+    }
+    .sliders {
+      @include flex(center, center, column);
+      position: absolute;
+      bottom: 0%;
+      background: $slider-bg-color;
+      padding: 1rem;
+      width: 80%;
+      border-top-right-radius: 1rem;
+      border-top-left-radius: 1rem;
+      transition: all 0.5s ease-in-out;
+      transform: translateY(100px);
+      pointer-events: none;
+      opacity: 0;
+      &.active {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: all;
+      }
+      button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0.5rem;
+        border-bottom-left-radius: 1rem;
+        font-size: $btn-size;
+        border: none;
+        background: $btn-color;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      input[type='range'] {
+        -webkit-appearance: none;
+        margin: 1rem 0rem;
+        width: 100%;
+        height: 1rem;
+        position: relative;
+        border-radius: 1rem;
+        cursor: pointer;
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          background: $btn-color;
+          box-shadow: 3px 3px 10px #000000;
+          border: 1px solid #000000;
+          height: 30px;
+          width: 15px;
+          border-radius: 7px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// html {
+//   font-size: 62.5%;
+// }
+
+body {
+  font-family: 'Mulish', sans-serif;
+  color: $primary-text-color;
+}
+
+h2 {
+  font-size: $header2;
+}
+
+h4 {
+  font-size: $header4;
+}
+
+path,
+i,
+svg {
+  pointer-events: none;
+}

@@ -1,0 +1,22 @@
+.panel {
+  @include flex(space-evenly, center, row);
+  height: 10vh;
+  button {
+    font-size: $btn-size;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    background: $btn-color;
+    color: white;
+    cursor: pointer;
+    border-radius: 1rem;
+    border: none;
+    p {
+      font-size: $btn-size;
+    }
+  }
+  .library-panel,
+  .generate-panel,
+  .save-panel {
+    @include flex(center, center, column);
+  }
+}

@@ -1,0 +1,25 @@
+// Variables
+$primary-text-color: rgb(51, 51, 51);
+$color-text-color: rgb(212, 212, 212);
+$slider-bg-color: #ffffff;
+$btn-color: rgb(73, 73, 73);
+$overlay-color: rgba(0, 0, 0, 0.5);
+
+$header2: 2rem;
+$header4: 2rem;
+$btn-size: 1.2rem;
+
+// Mixins
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+// Imports
+@import 'global';
+@import 'colors';
+@import 'panels';
+@import 'popups';
+@import 'header';
+@import 'footer';
